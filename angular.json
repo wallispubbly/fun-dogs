@@ -4,7 +4,7 @@
   "newProjectRoot": "projects",
   "projects": {
     "fun-dogs": {
-      "root": "",
+      "root": "index.html",
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",

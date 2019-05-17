@@ -13,6 +13,10 @@ export class DogComponent implements OnInit {
   constructor(private http: HttpClient) {};
 
   ngOnInit(): void {
+  	this.getADog();
+  }
+
+  getADog(): void {
   	this.http.get('https://random.dog/woof.json').subscribe(
   		data => {this.results = data['url']});
   }

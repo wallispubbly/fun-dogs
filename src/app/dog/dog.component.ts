@@ -7,8 +7,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./dog.component.css']
 })
 export class DogComponent implements OnInit {
-  
-  results = '';
+  results: string;
+  filetype: string;
 
   constructor(private http: HttpClient) {};
 
@@ -17,8 +17,7 @@ export class DogComponent implements OnInit {
   }
 
   getADog(): void {
-  	this.http.get('https://random.dog/woof.json').subscribe(
-  		data => {this.results = data['url']});
+  	this.http.get('https://random.dog/woof.json?filter=mp4,webm').subscribe(
+      data => {this.results = data['url'];});
   }
-
 }

@@ -1,8 +1,14 @@
-<script src="main.js"></script>
 <div class="container">
-	<button (click)="getADog()">get a dog</button>
-	<div class="text">
-		if it doesn't work keep hitting the button b/c idk how to make angular distinguish between a video and image ¯\_(ツ)_/¯
+	<div class="image-container">
+		<img class="img-responsive" src="{{results}}"> 
+	</div>
+	<div id="info-container">
+
+		<div class="text p-3">
+			<button (click)="getADog()" class="btn btn-primary">get a dog</button>
+			<div class="p-3">
+				if it doesn't work keep hitting the button b/c idk how to make angular distinguish between a video and image ¯\_(ツ)_/¯
+			</div>
+		</div>
 	</div>
 </div>
-<img src="{{results}}">
